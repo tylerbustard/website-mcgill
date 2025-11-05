@@ -81,25 +81,15 @@ export default function Resume() {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f5f5f7' }}>
+    <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Main Resume Content */}
       <div className="px-6 sm:px-8 lg:px-10 pb-12 pt-24">
         <div className="max-w-6xl mx-auto">
           
-          {/* Resume Container - Standard Letter Width with Auto Height */}
-          <div className="resume-page bg-white rounded-2xl shadow-lg mb-6 print:shadow-none print:border-0 print:rounded-none"
-               style={{ 
-                 width: '21.59cm',
-                 minHeight: '27.94cm', // Minimum height of letter size (11 inches)
-                 height: 'auto', // Auto height to accommodate all content
-                 padding: '1.5cm 1.27cm 2.54cm 1.27cm', // Top: 1.5cm (reduced), Left/Right: 1.27cm, Bottom: 2.54cm
-                 margin: '0 auto',
-                 boxSizing: 'border-box',
-                 overflow: 'visible', // Changed from hidden to visible to show all content
-                 border: '1px solid rgba(0,0,0,0.08)'
-               }}>
+          {/* Resume Container */}
+          <div className="resume-page bg-white rounded-2xl shadow-lg mb-6 print:shadow-none print:border-0 print:rounded-none">
             
             {/* Header Section - Compact Layout (no container box) */}
             <div className="mb-6">

@@ -30,6 +30,11 @@
   --chart-4: hsl(147.1429 78.5047% 41.9608%);
   --chart-5: hsl(341.4894 75.2000% 50.9804%);
   --radius: 1rem;
+  --resume-width: 21.59cm;
+  --resume-min-height: 27.94cm;
+  --resume-padding-inline: clamp(1rem, 3vw, 1.27cm);
+  --resume-padding-top: clamp(1.5rem, 3vw, 1.5cm);
+  --resume-padding-bottom: clamp(2rem, 4vw, 2.54cm);
   
   /* Clean Effects */
   --glass-bg: hsl(0 0% 100%);
@@ -199,6 +204,52 @@
 }
 
 @layer components {
+  .resume-page {
+    width: 100%;
+    max-width: var(--resume-width);
+    min-height: var(--resume-min-height);
+    margin: 0 auto;
+    padding: var(--resume-padding-top) var(--resume-padding-inline) var(--resume-padding-bottom);
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: var(--card);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .glass-elevated {
+    box-shadow: 0 12px 45px rgba(15, 23, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .glass-hero {
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-navbar {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    transform: translateZ(0);
+  }
+
+  .glass-navbar.is-scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  }
+
   .section-padding {
     @apply py-16 sm:py-24 lg:py-32 px-4 sm:px-6;
   }
@@ -771,6 +822,19 @@
     button, .button, [role="button"] {
       min-height: 48px;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .resume-page {
+    min-height: auto;
+    padding: clamp(1.5rem, 5vw, 2.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .resume-page {
+    padding: clamp(1.25rem, 6vw, 1.75rem);
   }
 }
 

@@ -43,17 +43,12 @@ export default function HeroSection() {
   };
   
   return (
-    <section id="hero" className="relative overflow-hidden min-h-screen flex items-center justify-center py-20 sm:py-28 lg:py-36" style={{ backgroundColor: '#f5f5f7' }}>
+    <section id="hero" className="relative overflow-hidden min-h-screen flex items-center justify-center py-20 sm:py-28 lg:py-36 bg-background">
       <div className="relative z-10 px-4 sm:px-6 w-full">
         <div className="max-w-7xl mx-auto">
           
           {/* Main Hero Card */}
-          <div className={`bg-white/80 backdrop-blur-md border border-white/30 rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-12 lg:p-16 shadow-2xl hover:shadow-3xl transition-all duration-500 page-load-fade-in ${isPageLoaded ? 'loaded' : ''}`}
-               style={{
-                 backdropFilter: 'blur(12px)',
-                 WebkitBackdropFilter: 'blur(12px)',
-                 boxShadow: '0 20px 80px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
-               }}>
+          <div className={`glass-hero rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-12 lg:p-16 shadow-2xl hover:shadow-3xl transition-all duration-500 page-load-fade-in ${isPageLoaded ? 'loaded' : ''}`}>
             
             <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
               {/* Profile Image */}
@@ -75,18 +70,18 @@ export default function HeroSection() {
                 {/* Name & Title */}
                 <div className="space-y-4 sm:space-y-6">
                   <div className="space-y-2 sm:space-y-3">
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl text-gray-900 dark:text-white tracking-tight leading-[0.9]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif' }}>
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl text-gray-900 dark:text-white tracking-tight leading-[0.9] font-display">
                       <span className="font-bold">Tyler</span>{' '}
                       <span className="font-normal">Bustard</span>
                     </h1>
                   </div>
-                  <p className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif' }}>
+                  <p className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary font-apple">
                     Finance & Technology Professional
                   </p>
                 </div>
 
                 {/* Description */}
-                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif' }}>
+                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0 font-apple">
                   Driving innovation at the intersection of finance and technology. 
                   Delivering exceptional results through analytical expertise, strategic thinking, and client-focused solutions.
                 </p>
@@ -209,12 +204,12 @@ export default function HeroSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-6 sm:mt-8 mb-6">
             
             {/* Education Card */}
-            <div 
+            <button 
+              type="button"
               onClick={() => scrollToSection('education')}
-              className={`group bg-white/90 backdrop-blur-[20px] border border-white/20 rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-3xl hover:shadow-blue-500/20 transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 page-load-fade-in cursor-pointer min-h-[200px] sm:min-h-[220px] flex flex-col justify-between hover:bg-gradient-to-br hover:from-white/95 hover:to-blue-50/80 ${isPageLoaded ? 'loaded' : ''}`}
+              aria-label="Scroll to education section"
+              className={`group glass-panel rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-3xl hover:shadow-blue-500/20 transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 page-load-fade-in cursor-pointer min-h-[200px] sm:min-h-[220px] flex flex-col justify-between hover:bg-gradient-to-br hover:from-white/95 hover:to-blue-50/80 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${isPageLoaded ? 'loaded' : ''}`}
                  style={{
-                   backdropFilter: 'blur(20px)',
-                   WebkitBackdropFilter: 'blur(20px)',
                    animationDelay: '0.5s'
                  }}
                  data-testid="card-education">
@@ -235,15 +230,15 @@ export default function HeroSection() {
               <p className="text-base text-muted-foreground group-hover:text-gray-700 leading-relaxed transition-colors duration-300">
                 Strategic business foundation with finance expertise
               </p>
-            </div>
+            </button>
 
             {/* Experience Card */}
-            <div 
+            <button 
+              type="button"
               onClick={() => scrollToSection('experience')}
-              className={`group bg-white/90 backdrop-blur-[20px] border border-white/20 rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-3xl hover:shadow-green-500/20 transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 page-load-fade-in cursor-pointer min-h-[200px] sm:min-h-[220px] flex flex-col justify-between hover:bg-gradient-to-br hover:from-white/95 hover:to-green-50/80 ${isPageLoaded ? 'loaded' : ''}`}
+              aria-label="Scroll to experience section"
+              className={`group glass-panel rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-3xl hover:shadow-green-500/20 transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 page-load-fade-in cursor-pointer min-h-[200px] sm:min-h-[220px] flex flex-col justify-between hover:bg-gradient-to-br hover:from-white/95 hover:to-green-50/80 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${isPageLoaded ? 'loaded' : ''}`}
                  style={{
-                   backdropFilter: 'blur(20px)',
-                   WebkitBackdropFilter: 'blur(20px)',
                    animationDelay: '0.6s'
                  }}
                  data-testid="card-experience">
@@ -267,15 +262,15 @@ export default function HeroSection() {
               <p className="text-base text-muted-foreground group-hover:text-gray-700 leading-relaxed transition-colors duration-300">
                 Professional experience in finance, banking and accounting
               </p>
-            </div>
+            </button>
 
             {/* Certifications Card */}
-            <div 
+            <button 
+              type="button"
               onClick={() => scrollToSection('certifications')}
-              className={`group bg-white/90 backdrop-blur-[20px] border border-white/20 rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-3xl hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 page-load-fade-in cursor-pointer min-h-[200px] sm:min-h-[220px] flex flex-col justify-between hover:bg-gradient-to-br hover:from-white/95 hover:to-purple-50/80 ${isPageLoaded ? 'loaded' : ''}`}
+              aria-label="Scroll to certifications section"
+              className={`group glass-panel rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-3xl hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 page-load-fade-in cursor-pointer min-h-[200px] sm:min-h-[220px] flex flex-col justify-between hover:bg-gradient-to-br hover:from-white/95 hover:to-purple-50/80 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${isPageLoaded ? 'loaded' : ''}`}
                  style={{
-                   backdropFilter: 'blur(20px)',
-                   WebkitBackdropFilter: 'blur(20px)',
                    animationDelay: '0.7s'
                  }}
                  data-testid="card-certifications">
@@ -299,15 +294,15 @@ export default function HeroSection() {
               <p className="text-base text-muted-foreground group-hover:text-gray-700 leading-relaxed transition-colors duration-300">
                 Certifications in finance, technology, and banking
               </p>
-            </div>
+            </button>
 
             {/* Community Card */}
-            <div 
+            <button 
+              type="button"
               onClick={() => scrollToSection('community')}
-              className={`group bg-white/90 backdrop-blur-[20px] border border-white/20 rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-3xl hover:shadow-orange-500/20 transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 page-load-fade-in cursor-pointer min-h-[200px] sm:min-h-[220px] flex flex-col justify-between hover:bg-gradient-to-br hover:from-white/95 hover:to-orange-50/80 ${isPageLoaded ? 'loaded' : ''}`}
+              aria-label="Scroll to community section"
+              className={`group glass-panel rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-3xl hover:shadow-orange-500/20 transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 page-load-fade-in cursor-pointer min-h-[200px] sm:min-h-[220px] flex flex-col justify-between hover:bg-gradient-to-br hover:from-white/95 hover:to-orange-50/80 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${isPageLoaded ? 'loaded' : ''}`}
                  style={{
-                   backdropFilter: 'blur(20px)',
-                   WebkitBackdropFilter: 'blur(20px)',
                    animationDelay: '0.8s'
                  }}
                  data-testid="card-community">
@@ -331,7 +326,7 @@ export default function HeroSection() {
               <p className="text-base text-muted-foreground group-hover:text-gray-700 leading-relaxed transition-colors duration-300">
                 Community leadership and volunteer service initiatives
               </p>
-            </div>
+            </button>
 
           </div>
         </div>

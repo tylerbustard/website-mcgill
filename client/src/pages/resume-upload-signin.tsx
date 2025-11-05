@@ -64,7 +64,7 @@ export default function ResumeUploadSignIn() {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f8fafc" }}>
+    <div className="min-h-screen bg-muted">
       <div className="flex items-center justify-center min-h-screen px-6 py-12">
         <Card className="w-full max-w-lg bg-white shadow-xl border border-gray-200 rounded-2xl">
         <CardHeader className="text-center space-y-4 p-10 pb-6">

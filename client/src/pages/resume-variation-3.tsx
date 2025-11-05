@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, type CSSProperties } from "react";
 import { useInitialPageAnimation } from "@/hooks/useScrollAnimation";
 import { Mail, Phone, MapPin, Globe, ChevronUp, Briefcase, GraduationCap, Award, Heart, Target, Users, TrendingUp } from "lucide-react";
 
@@ -56,22 +56,16 @@ export default function ResumeVariation3() {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f5f5f7' }}>
+    <div className="min-h-screen bg-background">
       {/* Main Resume Content - Variation 3: Leadership & Management Focus */}
       <div className="px-6 sm:px-8 lg:px-10 pb-12 pt-12">
         <div className="max-w-6xl mx-auto">
           
           {/* Resume Container - Exact dimensions: 21.59cm x 55.88cm */}
-          <div className={`resume-page bg-white rounded-2xl shadow-lg mb-6 page-load-fade-in print:shadow-none print:border-0 print:rounded-none ${isPageLoaded ? 'loaded' : ''}`}
-               style={{ 
-                 width: '21.59cm',
-                 height: '55.88cm',
-                 padding: '1.5cm 1.27cm 2.54cm 1.27cm',
-                 margin: '0 auto',
-                 boxSizing: 'border-box',
-                 overflow: 'hidden',
-                 border: '1px solid rgba(0,0,0,0.08)'
-               }}>
+          <div
+            className={`resume-page bg-white rounded-2xl overflow-hidden shadow-lg mb-6 page-load-fade-in print:shadow-none print:border-0 print:rounded-none ${isPageLoaded ? 'loaded' : ''}`}
+            style={{ "--resume-min-height": "55.88cm" } as CSSProperties}
+          >
             
             {/* Header Section - Leadership Focus */}
             <div className="mb-6">
