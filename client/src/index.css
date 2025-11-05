@@ -1,0 +1,862 @@
+@import url('https://fonts.googleapis.com/css2?family=New+York:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Apple's 2024 Color System */
+  --background: #f5f5f7;
+  --foreground: hsl(0 0% 6%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 6%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 6%);
+  --primary: hsl(212 100% 50%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(0 0% 45%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(0 0% 98%);
+  --muted-foreground: hsl(0 0% 45%);
+  --accent: hsl(0 0% 96%);
+  --accent-foreground: hsl(0 0% 6%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(0 0% 92%);
+  --input: hsl(0 0% 96%);
+  --ring: hsl(212 100% 50%);
+  --chart-1: hsl(220 70% 50%);
+  --chart-2: hsl(220 5% 65%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --radius: 1rem;
+  
+  /* Clean Effects */
+  --glass-bg: hsl(0 0% 100%);
+  --glass-border: hsl(0 0% 90%);
+  --glass-shadow: hsla(0 0% 0% / 0.1);
+  
+  /* Apple Typography - SF Pro Font System (2025) */
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-text: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: 'New York', ui-serif, Georgia, 'Times New Roman', serif;
+  
+  /* Apple Spacing System */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+}
+
+.dark {
+  --background: hsl(222.2 84% 4.9%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222.2 84% 4.9%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222.2 84% 4.9%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(217.2 91.2% 59.8%);
+  --primary-foreground: hsl(222.2 84% 4.9%);
+  --secondary: hsl(217.2 32.6% 17.5%);
+  --secondary-foreground: hsl(210 40% 98%);
+  --muted: hsl(217.2 32.6% 17.5%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+  --accent: hsl(217.2 32.6% 17.5%);
+  --accent-foreground: hsl(210 40% 98%);
+  --border: hsl(217.2 32.6% 17.5%);
+  --input: hsl(217.2 32.6% 17.5%);
+  --ring: hsl(224.3 76.3% 94.1%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-text);
+    letter-spacing: -0.022em;
+    line-height: 1.47059;
+    font-weight: 400;
+    font-feature-settings: 'kern' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    /* Removed scroll-behavior: smooth to prevent conflicts with JS scrolling */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-feature-settings: 'kern' 1;
+    text-rendering: optimizeLegibility;
+  }
+  
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-6xl font-bold;
+    letter-spacing: -0.022em;
+    line-height: 1.07143;
+    font-weight: 700;
+  }
+  
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl font-semibold;
+    letter-spacing: -0.022em;
+    line-height: 1.125;
+    font-weight: 600;
+  }
+  
+  h3 {
+    @apply text-lg sm:text-xl md:text-2xl font-medium;
+    letter-spacing: -0.022em;
+    line-height: 1.23077;
+    font-weight: 500;
+  }
+  
+  h4 {
+    @apply text-lg font-medium;
+    letter-spacing: -0.022em;
+    line-height: 1.33337;
+    font-weight: 500;
+  }
+  
+  h5 {
+    @apply text-base font-medium;
+    letter-spacing: -0.022em;
+    line-height: 1.38462;
+    font-weight: 500;
+  }
+  
+  h6 {
+    @apply text-sm font-medium;
+    letter-spacing: -0.022em;
+    line-height: 1.42857;
+    font-weight: 500;
+  }
+  
+  .headline {
+    font-family: var(--font-display);
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.022em;
+  }
+  
+  .subheadline {
+    font-family: var(--font-display);
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+  }
+  
+  .large-title {
+    font-family: var(--font-display);
+    font-size: 28px;
+    line-height: 1.14286;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+  }
+  
+  .callout {
+    font-family: var(--font-text);
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+  }
+  
+  .body-text {
+    font-family: var(--font-text);
+    font-size: 16px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+  }
+  
+  .subheading {
+    font-family: var(--font-text);
+    @apply font-medium text-lg;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .serif-headline {
+    font-family: var(--font-serif);
+    @apply text-4xl md:text-6xl font-bold;
+    letter-spacing: -0.02em;
+    line-height: 1.07143;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 sm:py-24 lg:py-32 px-4 sm:px-6;
+  }
+  
+  .container-width {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Apple Form Components */
+  .apple-input {
+    @apply w-full px-4 py-4 text-base text-foreground placeholder:text-muted-foreground;
+    @apply rounded-2xl border-0 outline-none transition-all duration-300;
+    background: hsl(0 0% 100%);
+    border: 1px solid hsl(0 0% 90%);
+    font-family: var(--font-text);
+    letter-spacing: -0.022em;
+    min-height: 56px; /* Better touch target */
+  }
+  
+  .apple-input:focus {
+    background: hsl(0 0% 100%);
+    border: 1px solid hsl(212 100% 50%);
+    box-shadow: 0 0 0 4px hsl(212 100% 90%);
+    transform: scale(1.02);
+  }
+  
+  .apple-label {
+    @apply block text-sm font-medium text-foreground mb-3;
+    font-family: var(--font-display);
+    letter-spacing: -0.022em;
+    font-weight: 500;
+  }
+  
+  /* Clean Components */
+  .apple-glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+  }
+  
+  .apple-card {
+    @apply apple-glass rounded-3xl transition-all duration-300 hover:scale-[1.02];
+    border: 1px solid hsl(0 0% 94%);
+    background: hsl(0 0% 100%);
+  }
+  
+  .apple-button {
+    @apply inline-flex items-center justify-center rounded-full px-6 sm:px-8 py-4 text-sm font-medium transition-all duration-200;
+    min-height: 48px; /* Better mobile touch target */
+    min-width: 48px;
+    font-weight: 500;
+  }
+  
+  .apple-button-primary {
+    @apply apple-button bg-primary text-primary-foreground active:scale-95;
+    box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+    transition: all 0.2s ease;
+  }
+  
+  .apple-button-primary:hover {
+    background: hsl(212 100% 45%);
+    box-shadow: 0 6px 20px 0 rgba(0, 118, 255, 0.5);
+  }
+  
+  .apple-button-secondary {
+    @apply apple-button bg-accent text-accent-foreground active:scale-95;
+    border: 1px solid var(--border);
+    background: hsl(0 0% 100%);
+    transition: all 0.2s ease;
+  }
+  
+  .apple-button-secondary:hover {
+    background: hsl(0 0% 94%);
+  }
+  
+  /* Apple Navigation */
+  .apple-nav {
+    @apply apple-glass fixed top-0 left-0 right-0 z-50;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  /* Clean Sections */
+  .apple-section {
+    @apply section-padding relative overflow-hidden;
+    background: hsl(0 0% 100%);
+  }
+  
+  .apple-section-alt {
+    @apply section-padding relative overflow-hidden;
+    background: hsl(0 0% 100%);
+  }
+  
+  /* Apple-style animations */
+  .apple-fade-in {
+    animation: appleSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .apple-stagger-1 { animation-delay: 0.1s; }
+  .apple-stagger-2 { animation-delay: 0.2s; }
+  .apple-stagger-3 { animation-delay: 0.3s; }
+  .apple-stagger-4 { animation-delay: 0.4s; }
+  
+  .apple-hover {
+    @apply transition-all duration-300 ease-out hover:scale-[1.02];
+  }
+
+  /* Initial page load animations - Removed duplicate */
+
+  /* Scroll-triggered animations - Consistent and Smooth */
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Removed will-change to reduce performance overhead */
+    backface-visibility: hidden;
+  }
+
+  .scroll-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .scroll-slide-up {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Removed will-change to reduce performance overhead */
+    backface-visibility: hidden;
+  }
+
+  .scroll-slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-scale-in {
+    opacity: 0;
+    transform: scale(0.96) translateY(15px);
+    transition: all 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* Removed will-change to reduce performance overhead */
+    backface-visibility: hidden;
+  }
+
+  .scroll-scale-in.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  /* Enhanced staggered delays with adaptive timing */
+  .scroll-stagger-1 { transition-delay: 0s; }
+  .scroll-stagger-2 { transition-delay: 0.08s; }
+  .scroll-stagger-3 { transition-delay: 0.16s; }
+  .scroll-stagger-4 { transition-delay: 0.24s; }
+  .scroll-stagger-5 { transition-delay: 0.32s; }
+  .scroll-stagger-6 { transition-delay: 0.4s; }
+  .scroll-stagger-7 { transition-delay: 0.48s; }
+  .scroll-stagger-8 { transition-delay: 0.56s; }
+
+  /* Adaptive timing based on scroll velocity */
+  .scroll-fast .scroll-fade-in,
+  .scroll-fast .scroll-slide-up,
+  .scroll-fast .scroll-scale-in {
+    transition-duration: 0.4s !important;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  }
+
+  .scroll-fast .scroll-stagger-1 { transition-delay: 0s !important; }
+  .scroll-fast .scroll-stagger-2 { transition-delay: 0.04s !important; }
+  .scroll-fast .scroll-stagger-3 { transition-delay: 0.08s !important; }
+  .scroll-fast .scroll-stagger-4 { transition-delay: 0.12s !important; }
+  .scroll-fast .scroll-stagger-5 { transition-delay: 0.16s !important; }
+  .scroll-fast .scroll-stagger-6 { transition-delay: 0.2s !important; }
+  .scroll-fast .scroll-stagger-7 { transition-delay: 0.24s !important; }
+  .scroll-fast .scroll-stagger-8 { transition-delay: 0.28s !important; }
+
+  .scroll-slow .scroll-fade-in,
+  .scroll-slow .scroll-slide-up,
+  .scroll-slow .scroll-scale-in {
+    transition-duration: 0.8s !important;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  /* Enhanced page load animation - Consistent throughout */
+  .page-load-fade-in {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    backface-visibility: hidden;
+    /* Removed will-change to reduce performance overhead */
+  }
+
+  .page-load-fade-in.loaded {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Prevent scroll jumping */
+  html {
+    /* Removed scroll-behavior: smooth to prevent conflicts with JS scrolling */
+    overflow-x: hidden;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Fix navigation bar layout shifts */
+  nav {
+    /* Removed will-change to reduce performance overhead */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Mobile optimizations with preserved animations */
+  @media (max-width: 640px) {
+    /* Hero section mobile centering */
+    #hero {
+      padding-top: 5rem !important;
+      padding-bottom: 2rem !important;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #hero > div {
+      margin-top: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 7rem);
+    }
+    
+    /* Fix mobile scroll jumping */
+    body {
+      -webkit-overflow-scrolling: touch;
+      overflow-x: hidden;
+    }
+    
+    /* Stabilize back to top button on mobile */
+    button[data-testid="scroll-to-top-button"] {
+      position: fixed !important;
+      bottom: 2rem !important;
+      transform: translateX(-50%) !important;
+    }
+    /* Force certifications to be immediately visible on mobile */
+    #certifications,
+    #certifications *,
+    .mobile-force-visible,
+    .mobile-force-visible * {
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+    }
+    
+    /* Ensure proper layout for certification section */
+    #certifications .container-width {
+      display: block !important;
+      opacity: 1 !important;
+    }
+    
+    #certifications .certifications-container {
+      display: block !important;
+      opacity: 1 !important;
+    }
+    
+    /* Fix grid and flex displays */
+    #certifications .grid {
+      display: grid !important;
+    }
+    
+    #certifications .flex {
+      display: flex !important;
+    }
+    
+    /* Override all animation classes in certifications */
+    #certifications .scroll-fade-in,
+    #certifications .scroll-slide-up,
+    #certifications .scroll-scale-in {
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+    }
+    
+    /* Faster animations on mobile for better responsiveness */
+    .scroll-fade-in,
+    .scroll-slide-up,
+    .scroll-scale-in {
+      transition-duration: 0.4s !important;
+      transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    }
+    
+    .scroll-stagger-1 { transition-delay: 0s !important; }
+    .scroll-stagger-2 { transition-delay: 0.03s !important; }
+    .scroll-stagger-3 { transition-delay: 0.06s !important; }
+    .scroll-stagger-4 { transition-delay: 0.09s !important; }
+    .scroll-stagger-5 { transition-delay: 0.12s !important; }
+    .scroll-stagger-6 { transition-delay: 0.15s !important; }
+    .scroll-stagger-7 { transition-delay: 0.18s !important; }
+    .scroll-stagger-8 { transition-delay: 0.21s !important; }
+    
+    /* Only disable animations if user prefers reduced motion */
+    .mobile-visible.reduced-motion {
+      opacity: 1 !important;
+      transform: scale(1) translateY(0) !important;
+      transition: none !important;
+    }
+    
+    /* Ensure critical sections are always visible on mobile */
+    #experience,
+    #certifications,
+    #about,
+    #skills {
+      min-height: auto;
+    }
+    
+    /* Fallback for mobile experience section - immediate visibility */
+    #experience .scroll-scale-in {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      transition-duration: 0.2s !important;
+      transition-delay: 0s !important;
+    }
+    #experience .scroll-fade-in,
+    #experience .scroll-slide-up {
+      opacity: 1 !important;
+      transform: none !important;
+      transition-duration: 0.2s !important;
+      transition-delay: 0s !important;
+    }
+    
+    /* Remove all stagger delays for experience on mobile */
+    #experience .scroll-stagger-1,
+    #experience .scroll-stagger-2,
+    #experience .scroll-stagger-3,
+    #experience .scroll-stagger-4,
+    #experience .scroll-stagger-5,
+    #experience .scroll-stagger-6,
+    #experience .scroll-stagger-7,
+    #experience .scroll-stagger-8 {
+      transition-delay: 0s !important;
+    }
+
+    /* Force experience content visibility and layout */
+    #experience,
+    #experience *,
+    .mobile-force-visible-experience,
+    .mobile-force-visible-experience * {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+    }
+    #experience .container-width,
+    #experience .certifications-container {
+      display: block !important;
+      opacity: 1 !important;
+    }
+    #experience .grid { display: grid !important; }
+    #experience .flex { display: flex !important; }
+    
+    /* Fallback for mobile certifications section - immediate visibility */
+    #certifications .scroll-scale-in,
+    #certifications .scroll-fade-in,
+    #certifications .scroll-slide-up,
+    #certifications .certifications-container > div {
+      opacity: 1 !important;
+      transform: scale(1) translateY(0) !important;
+      transition-duration: 0.2s !important;
+      transition-delay: 0s !important;
+      visibility: visible !important;
+    }
+    
+    /* Force visibility for certifications items on mobile */
+    #certifications .scroll-scale-in.visible,
+    #certifications .scroll-scale-in:not(.visible) {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    
+    /* Remove all stagger delays for certifications on mobile */
+    #certifications .scroll-stagger-1,
+    #certifications .scroll-stagger-2,
+    #certifications .scroll-stagger-3,
+    #certifications .scroll-stagger-4,
+    #certifications .scroll-stagger-5,
+    #certifications .scroll-stagger-6,
+    #certifications .scroll-stagger-7,
+    #certifications .scroll-stagger-8 {
+      transition-delay: 0s !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    
+    /* Force visibility if animation fails on mobile */
+    @media (max-height: 800px) {
+      .scroll-scale-in {
+        opacity: 1 !important;
+        transform: scale(1) translateY(0) !important;
+        transition-duration: 0.2s !important;
+      }
+    }
+    
+    /* Performance optimizations for mobile */
+    .scroll-fade-in,
+    .scroll-slide-up,
+    .scroll-scale-in {
+      transform: translateZ(0); /* Force GPU acceleration */
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-fade-in,
+    .scroll-slide-up,
+    .scroll-scale-in,
+    .page-load-fade-in {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
+  /* Enhanced performance for fast scrolling */
+  .scroll-fast * {
+    /* Removed will-change to reduce performance overhead */
+  }
+  
+  /* Ensure visibility during fast scrolling */
+  .scroll-fast .scroll-fade-in.visible,
+  .scroll-fast .scroll-slide-up.visible,
+  .scroll-fast .scroll-scale-in.visible {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+  }
+  
+  /* Fallback for ultra-fast scrolling and mobile devices */
+  @media (max-height: 600px), (max-width: 480px) {
+    .scroll-fade-in,
+    .scroll-slide-up,
+    .scroll-scale-in {
+      transition-duration: 0.2s !important;
+      opacity: 1 !important;
+      transform: scale(1) translateY(0) !important;
+    }
+  }
+
+  /* True Glass Effect - Transparent not White */
+  .liquid-glass-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+    border-radius: 9999px 9999px 0 0;
+    z-index: 3;
+  }
+  
+  .liquid-glass-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.05),
+      transparent
+    );
+    border-radius: 0 0 9999px 9999px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .liquid-glass-button:hover::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+  }
+  
+  .liquid-glass-button:hover {
+    background: rgba(255, 255, 255, 0.04) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+  }
+
+  /* Clean Navigation Glass Effects */
+  .nav-glass {
+    position: relative;
+  }
+  
+  .nav-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+  }
+  
+  .dropdown-glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+  
+  .dropdown-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    border-radius: 0.75rem 0.75rem 0 0;
+    pointer-events: none;
+  }
+  
+  .mobile-glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Mobile-first responsive utilities */
+  @media (max-width: 640px) {
+    .text-responsive {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+    
+    .touch-target {
+      min-height: 48px;
+      min-width: 48px;
+    }
+    
+    .mobile-padding {
+      padding: 1rem;
+    }
+    
+    .mobile-gap {
+      gap: 0.75rem;
+    }
+  }
+
+  /* Enhanced touch targets for mobile */
+  @media (hover: none) and (pointer: coarse) {
+    .touch-friendly {
+      min-height: 44px;
+      padding: 12px 16px;
+    }
+    
+    button, .button, [role="button"] {
+      min-height: 48px;
+    }
+  }
+}
+
+@keyframes appleSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appleGlow {
+  0%, 100% {
+    box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  }
+  50% {
+    box-shadow: 0 6px 20px 0 rgba(0, 118, 255, 0.5);
+  }
+}
+
+/* Apple SF Pro Typography Classes - 2025 Design System */
+.apple-heading {
+  font-family: var(--font-display);
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.035em;
+}
+
+.apple-heading-nav {
+  font-family: var(--font-text);
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.025em;
+}
+
+/* Print Styles for PDF Download */
+@media print {
+  /* Set page size and margins */
+  @page {
+    size: letter;  /* 8.5 x 11 inches */
+    margin: 0.5in 0.75in;
+  }
+  
+  /* Hide UI elements that shouldn't appear in PDF */
+  nav, header, footer, button, .no-print {
+    display: none !important;
+  }
+  
+  /* Reset backgrounds for clean print output */
+  body {
+    background: white !important;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Preserve colors and backgrounds when printing */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  /* Ensure resume content displays properly */
+  .resume-page {
+    background: white !important;
+    box-shadow: none !important;
+    border: none !important;
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+  
+  /* Force page breaks where appropriate */
+  .page-break-before {
+    page-break-before: always;
+  }
+  
+  .page-break-after {
+    page-break-after: always;
+  }
+  
+  /* Allow natural breaks inside longer content */
+  section, .card, .experience-item {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+}

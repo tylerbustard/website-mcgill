@@ -1,0 +1,41 @@
+Prompt: Consolidate Branch Routes to Main Routes
+
+I need you to migrate my portfolio website by consolidating all content from legacy branch routes onto the main routes, then remove the branch routing entirely.
+
+Current State:
+
+The application currently has branch routes like /profile, /queensuniversity, /universityoftoronto, /resume/profile, etc.
+Each branch contains the same core content but may have slight variations
+The main routes (like / and /resume) exist but may not have all the content from branches
+Required Actions:
+
+Content Consolidation Phase:
+Analyze all existing branch routes (e.g., /profile/*, /queensuniversity/*, /universityoftoronto/*)
+Identify all unique content, components, and features present in any branch
+Consolidate ALL content onto the main routes (/ for home content, /resume for resume content)
+Ensure no information is lost during consolidation
+Update main route components to include any missing features from branches
+Route Cleanup Phase:
+Remove all branch route definitions from the routing configuration
+Delete any branch-specific components that are no longer needed
+Update navigation to only use main routes
+Remove any variation props or conditional rendering based on route branches
+Clean up any unused imports or dependencies
+Verification Requirements:
+Ensure main routes contain all functionality that was previously spread across branches
+Test that all navigation works properly with only main routes
+Confirm no broken links or missing content
+Verify the application runs without errors
+Technical Notes:
+
+The project uses a modern React setup with wouter for routing
+Components may have variation props that need to be removed
+Navigation components likely have conditional logic for different routes
+Ensure client/server separation is maintained
+Final State:
+
+Only main routes should exist (e.g., /, /resume)
+All content previously available in branches should be accessible from main routes
+Clean, simplified routing structure
+No legacy branch-specific code remaining
+Please execute this migration systematically, testing at each phase to ensure no functionality is lost.

@@ -1,0 +1,11 @@
+/* TEAM */
+Developer: Tyler Bustard
+Site: https://tylerbustard.com
+Location: Saint John, New Brunswick, Canada
+
+/* SITE */
+Last update: 2025-08-28
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: React, TypeScript, Tailwind CSS, Vite
+Software: Node.js, Express, PostgreSQL
+Features: SQL Translator, Portfolio Showcase, Resume Display

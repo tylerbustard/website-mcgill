@@ -1,0 +1,615 @@
+~/workspace$ git push origin main --force
+Enumerating objects: 1306, done.
+Counting objects: 100% (1306/1306), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (1251/1251), done.
+Writing objects: 100% (1306/1306), 104.95 MiB | 5.69 MiB/s, done.
+Total 1306 (delta 573), reused 504 (delta 51), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (573/573), done.
+remote: fatal: did not receive expected object f8d6fcbcb2a1b40ece9d6d137330a3484c85d3eb
+error: remote unpack failed: index-pack failed
+To https://github.com/tylerbustard/Personal-Profile.git
+ ! [remote rejected] main -> main (failed)
+error: failed to push some refs to 'https://github.com/tylerbustard/Personal-Profile.git'
+~/workspace$ git fsck --full
+Checking object directories: 100% (256/256), done.
+Checking objects: 100% (530/530), done.
+~/workspace$ # Remove the current Git history
+rm -rf .git
+
+# Initialize a fresh repository
+git init
+git add .
+git commit -m "Initial commit"
+
+# Add your remote and push
+git remote add origin https://github.com/tylerbustard/Personal-Profile.git
+git branch -M main
+git push -u origin main
+Initialized empty Git repository in /home/runner/workspace/.git/
+[main (root-commit) 8e8a31c] Initial commit
+ 556 files changed, 27744 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .replit
+ create mode 100644 Resume_Template_Generator.vba
+ create mode 100644 attached_assets/89BBD451-CD8B-47EB-AA2E-C39D4637B01D_1_105_c_1755896148330.jpeg
+ create mode 100644 attached_assets/9507ff26-f409-43c4-8f53-5983530a76ed-00-j4bbyvl9s9nh.picard.replit.dev_resume_1756110360437.pdf
+ create mode 100644 attached_assets/9507ff26-f409-43c4-8f53-5983530a76ed-00-j4bbyvl9s9nh.picard.replit.dev_resume_1756110715966.pdf
+ create mode 100644 attached_assets/9507ff26-f409-43c4-8f53-5983530a76ed-00-j4bbyvl9s9nh.picard.replit.dev_resume_1756111043264.pdf
+ create mode 100644 attached_assets/9507ff26-f409-43c4-8f53-5983530a76ed-00-j4bbyvl9s9nh.picard.replit.dev_resume_1756112581152.pdf
+ create mode 100644 attached_assets/9507ff26-f409-43c4-8f53-5983530a76ed-00-j4bbyvl9s9nh.picard.replit.dev_resume_1756112696239.pdf
+ create mode 100644 attached_assets/9507ff26-f409-43c4-8f53-5983530a76ed-00-j4bbyvl9s9nh.picard.replit.dev_resume_1756112974323.pdf
+ create mode 100644 attached_assets/ABEA68A3-5A91-4D58-914D-2FF6537549D2_1_105_c_1755995353601.jpeg
+ create mode 100644 attached_assets/BMO_Logo.svg_1755913265896.png
+ create mode 100644 attached_assets/Black And White Modern Initial PB Consulting Logo Design_1756155482217.png
+ create mode 100644 attached_assets/Black And White Modern Initial PB Consulting Logo Design_1756155672169.png
+ create mode 100644 attached_assets/CFA_Institute_Logo_1755923720192.png
+ create mode 100644 attached_assets/Coursera_1755923720192.png
+ create mode 100644 attached_assets/Coursera_1755937682843.png
+ create mode 100644 attached_assets/Coursera_1755939373919.png
+ create mode 100644 attached_assets/ETS_1755939510188.png
+ create mode 100644 attached_assets/Effect Example_1755940934348.png
+ create mode 100644 attached_assets/Effect Example_1755980076222.png
+ create mode 100644 attached_assets/Grant_Thornton_logo_1755913265895.png
+ create mode 100644 attached_assets/IMG_1864_1756140554470.png
+ create mode 100644 attached_assets/Irving_Oil.svg_1755913265895.png
+ create mode 100644 attached_assets/Pasted-Education-UBC-Sauder-School-of-Business-University-of-British-Columbia-Vancouver-British-Columbia-1755896082130_1755896082131.txt
+ create mode 100644 attached_assets/Pasted-Education-University-of-New-Brunswick-UNB-Saint-John-New-Brunswick-Bachelor-of-Business-Administr-1755896114659_1755896114660.txt
+ create mode 100644 attached_assets/Pasted-Goal-Make-Google-show-the-site-name-Tyler-Bustard-not-Tyler-Bustard-and-use-your-headshot-a-1756616364486_1756616364487.txt
+ create mode 100644 attached_assets/Pasted-You-are-an-expert-Excel-automation-engineer-I-am-providing-you-with-the-current-prototype-Excel-wor-1755927657546_1755927657547.txt
+ create mode 100644 attached_assets/RBC-Logo_1755913265896.png
+ create mode 100644 attached_assets/RBC-Logo_1755913716813.png
+ create mode 100644 "attached_assets/Screenshot 2025-08-22 at 10.00.25\342\200\257PM_1755914428294.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-22 at 10.11.00\342\200\257PM_1755915064148.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-22 at 10.12.50\342\200\257PM_1755915172628.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-22 at 10.16.20\342\200\257PM_1755915383684.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-22 at 10.26.33\342\200\257PM_1755915996298.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-22 at 10.26.48\342\200\257PM_1755916010925.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-22 at 10.31.59\342\200\257PM_1755916321724.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-22 at 10.45.04\342\200\257PM_1755917107388.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-22 at 11.14.34\342\200\257PM_1755918878358.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-22 at 8.59.19\342\200\257PM_1755910761921.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 1.45.18\342\200\257AM_1755927921099.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 1.45.52\342\200\257AM_1755927955112.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 1.47.55\342\200\257AM_1755928077937.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 1.52.13\342\200\257AM_1755928336844.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 1.57.16\342\200\257AM_1755928640191.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.07.33\342\200\257PM_1756001256122.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.09.14\342\200\257PM_1756001356986.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.13.03\342\200\257PM_1756001586103.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.14.09\342\200\257PM_1756001653380.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.18.34\342\200\257PM_1756001916233.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.18.42\342\200\257PM_1756001926493.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.20.36\342\200\257PM_1756002041339.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.20.47\342\200\257PM_1756002048896.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.27.14\342\200\257PM_1756002436563.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.27.47\342\200\257PM_1756002471302.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.27.58\342\200\257PM_1756002481687.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.29.55\342\200\257PM_1756002597641.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.35.41\342\200\257PM_1756002944408.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 10.57.53\342\200\257PM_1756004297081.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 11.03.11\342\200\257PM_1756004594447.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 11.03.32\342\200\257PM_1756004614798.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 11.35.28\342\200\257PM_1756006531866.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 11.35.36\342\200\257PM_1756006540962.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 12.10.12\342\200\257AM_1755922219282.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 12.49.55\342\200\257AM_1755924599753.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 12.51.01\342\200\257AM_1755924666384.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.01.30\342\200\257AM_1755951535583.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.24.31\342\200\257PM_1755973477276.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.33.10\342\200\257AM_1755930792461.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.33.52\342\200\257AM_1755930834959.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.39.40\342\200\257AM_1755931182879.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.43.12\342\200\257AM_1755931395014.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.43.20\342\200\257AM_1755931403179.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.43.30\342\200\257AM_1755931412567.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.43.42\342\200\257AM_1755931425249.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.45.15\342\200\257AM_1755931518299.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.46.14\342\200\257PM_1755974777492.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.47.03\342\200\257PM_1755974825618.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.47.54\342\200\257AM_1755931677426.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.52.55\342\200\257PM_1755975177467.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.58.53\342\200\257PM_1755975536829.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.59.03\342\200\257AM_1755932346358.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.59.07\342\200\257PM_1755975550019.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 2.59.14\342\200\257AM_1755932359450.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.04.05\342\200\257PM_1755975847663.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.06.41\342\200\257PM_1755976004145.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.08.00\342\200\257AM_1755932883718.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.08.12\342\200\257AM_1755932894362.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.08.19\342\200\257AM_1755932901374.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.08.28\342\200\257AM_1755932911107.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.08.28\342\200\257PM_1755976111131.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.08.36\342\200\257PM_1755976118144.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.08.38\342\200\257AM_1755932920437.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.08.46\342\200\257AM_1755932928671.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.08.54\342\200\257AM_1755932937587.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.09.14\342\200\257AM_1755932957106.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.09.27\342\200\257AM_1755932969113.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.09.35\342\200\257AM_1755932979272.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.09.35\342\200\257PM_1755976177973.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.12.44\342\200\257PM_1755976369223.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.17.37\342\200\257PM_1755976661179.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.18.12\342\200\257PM_1755976698512.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.19.54\342\200\257PM_1755976798514.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.22.34\342\200\257AM_1755933757468.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.23.36\342\200\257AM_1755933819308.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.27.57\342\200\257AM_1755934079801.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.28.29\342\200\257AM_1755934111899.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.30.03\342\200\257AM_1755934206532.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.41.08\342\200\257AM_1755934872683.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.41.09\342\200\257PM_1755978071562.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.42.05\342\200\257AM_1755934928184.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.52.18\342\200\257AM_1755935541488.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.53.14\342\200\257PM_1755978796543.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.54.57\342\200\257AM_1755935700998.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 3.55.00\342\200\257PM_1755978903157.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.00.00\342\200\257AM_1755936003233.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.00.10\342\200\257AM_1755936014668.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.00.24\342\200\257AM_1755936027600.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.00.29\342\200\257PM_1755979231890.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.00.40\342\200\257PM_1755979242373.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.06.39\342\200\257PM_1755979602588.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.06.52\342\200\257PM_1755979615037.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.06.59\342\200\257PM_1755979622339.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.10.45\342\200\257PM_1755979848394.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.10.54\342\200\257PM_1755979856749.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.12.27\342\200\257PM_1755979949731.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.12.34\342\200\257PM_1755979957478.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.13.50\342\200\257PM_1755980033884.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.13.59\342\200\257PM_1755980040935.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.15.41\342\200\257PM_1755980143051.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.17.23\342\200\257PM_1755980245613.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.19.23\342\200\257AM_1755937166372.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.20.17\342\200\257PM_1755980419623.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.21.42\342\200\257AM_1755937304960.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.23.19\342\200\257PM_1755980602939.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.24.51\342\200\257PM_1755980694260.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.27.39\342\200\257PM_1755980862928.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.28.23\342\200\257AM_1755937705723.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.30.20\342\200\257PM_1755981023468.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.32.22\342\200\257PM_1755981144515.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.33.17\342\200\257PM_1755981199544.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.39.05\342\200\257PM_1755981547142.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.39.21\342\200\257PM_1755981564007.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.41.09\342\200\257AM_1755938471986.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.42.02\342\200\257PM_1755981724789.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.43.17\342\200\257PM_1755981800106.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.52.07\342\200\257PM_1755982329103.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 4.59.46\342\200\257AM_1755939589448.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 5.02.46\342\200\257AM_1755939769106.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 5.03.45\342\200\257AM_1755939828162.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 5.04.39\342\200\257AM_1755939882722.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 5.13.56\342\200\257AM_1755940439061.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 5.21.46\342\200\257AM_1755940909179.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 5.29.52\342\200\257AM_1755941395379.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 5.37.25\342\200\257AM_1755941851085.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 5.51.07\342\200\257AM_1755942669947.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 5.52.45\342\200\257AM_1755942768116.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 5.54.37\342\200\257AM_1755942879775.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 6.00.13\342\200\257AM_1755943216101.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 6.02.00\342\200\257AM_1755943322522.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 6.09.21\342\200\257AM_1755943765132.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 6.15.13\342\200\257AM_1755944115786.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 6.31.52\342\200\257AM_1755945115702.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 6.34.24\342\200\257AM_1755945267110.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 6.47.54\342\200\257AM_1755946077305.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 6.49.17\342\200\257AM_1755946160793.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 7.03.23\342\200\257AM_1755947005854.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 8.10.16\342\200\257AM_1755951020030.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 8.20.39\342\200\257AM_1755951641551.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 8.27.08\342\200\257AM_1755952030226.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 8.31.46\342\200\257AM_1755952308854.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 8.35.02\342\200\257PM_1755995705500.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 8.40.08\342\200\257AM_1755952810800.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 9.00.20\342\200\257PM_1755997224192.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 9.28.18\342\200\257PM_1755998900289.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 9.28.41\342\200\257PM_1755998924763.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 9.32.51\342\200\257PM_1755999174234.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-23 at 9.35.49\342\200\257PM_1755999353036.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.53.14\342\200\257PM_1756057997380.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.54.08\342\200\257PM_1756058051388.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.54.16\342\200\257PM_1756058059401.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.57.24\342\200\257PM_1756058247309.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.57.32\342\200\257PM_1756058254030.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.57.39\342\200\257PM_1756058261253.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.57.59\342\200\257PM_1756058281337.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.59.18\342\200\257PM_1756058360757.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.59.26\342\200\257PM_1756058368756.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.59.34\342\200\257PM_1756058376502.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 1.59.54\342\200\257PM_1756058396740.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 11.36.05\342\200\257PM_1756092967694.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 12.04.20\342\200\257AM_1756008263934.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 12.32.50\342\200\257AM_1756009972945.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 12.33.42\342\200\257AM_1756010025304.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 12.33.51\342\200\257AM_1756010035766.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 12.34.43\342\200\257AM_1756010085501.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 12.35.20\342\200\257AM_1756010122277.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 12.36.07\342\200\257AM_1756010171128.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 12.37.36\342\200\257AM_1756010259527.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 12.39.31\342\200\257AM_1756010373954.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.00.04\342\200\257PM_1756058407505.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.00.13\342\200\257PM_1756058416956.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.00.22\342\200\257PM_1756058424401.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.02.40\342\200\257PM_1756058563193.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.02.49\342\200\257PM_1756058572099.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.03.45\342\200\257PM_1756058629237.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.08.40\342\200\257PM_1756062064563.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.08.40\342\200\257PM_1756063351288.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.27.46\342\200\257PM_1756060070383.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.29.46\342\200\257PM_1756060191215.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.44.11\342\200\257PM_1756061056274.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.45.31\342\200\257PM_1756061135676.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.46.25\342\200\257PM_1756061189779.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.47.18\342\200\257PM_1756061242781.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.48.29\342\200\257PM_1756061313832.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.49.22\342\200\257PM_1756061366457.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.50.56\342\200\257PM_1756061460613.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.54.26\342\200\257PM_1756061670503.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 2.56.14\342\200\257PM_1756061779267.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.00.55\342\200\257PM_1756062058840.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.04.35\342\200\257PM_1756062278710.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.06.08\342\200\257PM_1756062371791.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.12.29\342\200\257PM_1756062753290.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.13.39\342\200\257PM_1756062824806.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.17.16\342\200\257PM_1756063041844.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.18.41\342\200\257PM_1756063125335.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.19.52\342\200\257PM_1756063196475.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.21.07\342\200\257PM_1756063270871.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.27.27\342\200\257PM_1756063651204.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.29.01\342\200\257PM_1756063744181.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.30.04\342\200\257PM_1756063808328.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.39.14\342\200\257PM_1756064358382.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.55.33\342\200\257PM_1756065338346.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 3.59.37\342\200\257PM_1756065581607.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.01.27\342\200\257PM_1756065691543.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.01.40\342\200\257PM_1756065704221.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.01.50\342\200\257PM_1756065714926.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.01.59\342\200\257PM_1756065722887.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.02.09\342\200\257PM_1756065732499.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.10.05\342\200\257PM_1756066209527.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.22.09\342\200\257PM_1756066931835.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.22.15\342\200\257PM_1756066937642.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.54.53\342\200\257PM_1756068895633.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.55.02\342\200\257PM_1756068904889.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.58.59\342\200\257PM_1756069141552.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 4.59.10\342\200\257PM_1756069152226.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 5.08.54\342\200\257PM_1756069737940.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 5.11.40\342\200\257PM_1756069902310.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 5.26.36\342\200\257PM_1756070798704.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 5.26.46\342\200\257PM_1756070809731.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 5.34.27\342\200\257PM_1756071269898.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 6.04.32\342\200\257PM_1756073074524.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 6.07.42\342\200\257PM_1756073265478.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 6.29.48\342\200\257PM_1756074590688.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 6.29.56\342\200\257PM_1756074599108.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 6.30.03\342\200\257PM_1756074606266.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 6.40.50\342\200\257PM_1756075255603.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 6.41.14\342\200\257PM_1756075276694.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 6.46.13\342\200\257PM_1756075575583.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 6.57.27\342\200\257PM_1756076250019.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 6.59.20\342\200\257PM_1756076364808.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.07.11\342\200\257PM_1756076835195.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.22.42\342\200\257PM_1756077767205.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.22.52\342\200\257PM_1756077774044.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.24.36\342\200\257PM_1756077881480.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.28.57\342\200\257PM_1756078141128.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.29.26\342\200\257PM_1756078169644.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.31.24\342\200\257PM_1756078289593.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.33.48\342\200\257PM_1756078432776.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.37.23\342\200\257PM_1756078647529.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.46.27\342\200\257PM_1756079190218.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-24 at 7.46.36\342\200\257PM_1756079197665.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 1.23.34\342\200\257AM_1756099418799.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 1.54.44\342\200\257PM_1756144487316.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 12.49.34\342\200\257AM_1756097377882.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 2.13.56\342\200\257AM_1756102441227.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 2.14.27\342\200\257AM_1756102471975.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 2.15.48\342\200\257PM_1756145751364.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 2.32.33\342\200\257AM_1756103556425.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 2.33.33\342\200\257AM_1756103676307.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 2.39.09\342\200\257AM_1756103954806.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 2.39.38\342\200\257AM_1756103983830.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 2.44.55\342\200\257AM_1756104299316.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.19.10\342\200\257PM_1756149553081.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.27.46\342\200\257PM_1756150070556.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.28.10\342\200\257PM_1756150095311.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.28.29\342\200\257PM_1756150114582.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.29.04\342\200\257PM_1756150150300.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.36.00\342\200\257PM_1756150564207.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.36.26\342\200\257AM_1756107388866.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.37.48\342\200\257AM_1756107471438.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.37.59\342\200\257PM_1756150683020.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.38.16\342\200\257PM_1756150701481.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.49.38\342\200\257AM_1756108181688.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.52.13\342\200\257PM_1756151536987.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 3.52.32\342\200\257PM_1756151556411.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 4.02.09\342\200\257AM_1756111077266.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 4.02.19\342\200\257AM_1756111077266.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 4.04.02\342\200\257PM_1756152246855.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 4.04.26\342\200\257PM_1756152270990.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 4.04.56\342\200\257PM_1756152300084.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 4.10.10\342\200\257PM_1756152614470.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 4.10.22\342\200\257PM_1756152625978.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 4.50.13\342\200\257PM_1756155017422.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 4.52.22\342\200\257PM_1756155146564.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 4.53.44\342\200\257PM_1756155228235.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 5.09.14\342\200\257AM_1756112956917.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 5.09.24\342\200\257AM_1756112966919.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 5.09.36\342\200\257PM_1756156178301.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.13.50\342\200\257PM_1756160032029.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.14.11\342\200\257AM_1756116855165.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.14.58\342\200\257AM_1756116901154.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.15.50\342\200\257PM_1756160152594.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.18.09\342\200\257AM_1756117092517.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.22.31\342\200\257PM_1756160555171.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.25.20\342\200\257PM_1756160722741.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.27.51\342\200\257AM_1756117675694.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.28.58\342\200\257PM_1756160940840.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.29.32\342\200\257PM_1756160975413.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 6.38.11\342\200\257PM_1756161495003.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 7.15.16\342\200\257PM_1756163718358.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 7.25.00\342\200\257PM_1756164303819.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 7.25.43\342\200\257PM_1756164345779.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 8.27.10\342\200\257PM_1756168031998.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 8.47.06\342\200\257PM_1756169230215.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 9.33.26\342\200\257PM_1756172044936.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 9.38.49\342\200\257PM_1756172333591.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 9.45.14\342\200\257PM_1756172717411.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 9.48.27\342\200\257PM_1756172909728.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 9.50.33\342\200\257PM_1756173036624.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 9.52.36\342\200\257PM_1756173160311.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-25 at 9.55.08\342\200\257PM_1756173313547.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 10.39.54\342\200\257PM_1756348796568.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 10.44.47\342\200\257PM_1756349091521.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 10.47.18\342\200\257PM_1756349241401.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 11.29.49\342\200\257PM_1756351791982.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 11.29.57\342\200\257PM_1756351799583.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 11.39.01\342\200\257PM_1756352344755.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 3.50.56\342\200\257PM_1756324259126.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 4.49.29\342\200\257PM_1756327797106.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 5.05.28\342\200\257PM_1756328732578.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 5.07.57\342\200\257PM_1756328917910.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 5.31.45\342\200\257PM_1756330308194.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 5.32.09\342\200\257PM_1756330331263.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 5.35.05\342\200\257PM_1756330507987.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 5.35.39\342\200\257PM_1756330541991.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 5.35.47\342\200\257PM_1756330549276.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 5.36.43\342\200\257PM_1756330606314.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 5.45.47\342\200\257PM_1756331152600.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 6.35.18\342\200\257PM_1756334122913.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-27 at 9.57.22\342\200\257PM_1756346273254.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-29 at 3.22.14\342\200\257PM_1756495384834.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-31 at 1.17.14\342\200\257AM_1756617453094.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-31 at 12.14.21\342\200\257AM_1756613717274.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-31 at 12.15.57\342\200\257AM_1756613764174.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-31 at 12.26.47\342\200\257AM_1756614413149.png"
+ create mode 100644 "attached_assets/Screenshot 2025-08-31 at 12.45.21\342\200\257AM_1756615526794.png"
+ create mode 100644 "attached_assets/Screenshot 2025-09-09 at 4.57.45\342\200\257PM_1757451469474.png"
+ create mode 100644 "attached_assets/Screenshot 2025-09-09 at 4.58.06\342\200\257PM_1757451497497.png"
+ create mode 100644 attached_assets/Toronto-Dominion_Bank_logo.svg_1755913265896.png
+ create mode 100644 attached_assets/Tyler Bustard - Professional Resume_1755900926305.html
+ create mode 100644 attached_assets/Tyler Bustard - Resume_1755997229633.pdf
+ create mode 100644 attached_assets/Tyler Bustard_1756349330009.jpeg
+ create mode 100644 attached_assets/Tyler_Bustard_Resume (3)_1755997458339.html
+ create mode 100644 attached_assets/Tyler_Bustard_Resume.pdf
+ create mode 100644 attached_assets/United-Way-Logo_1755913265895.png
+ create mode 100644 attached_assets/University of New Brunswick - Transcript_1755940546750.pdf
+ create mode 100644 attached_assets/University_of_New_Brunswick_Logo.svg_1755912478863.png
+ create mode 100644 attached_assets/Untitled design (1)_1755896187722.png
+ create mode 100644 attached_assets/bloomberg_1755923720190.png
+ create mode 100644 attached_assets/bloomberg_1755939196335.png
+ create mode 100644 attached_assets/canadian securities institute_1755923720191.png
+ create mode 100644 attached_assets/cibc_1755931822053.png
+ create mode 100644 attached_assets/fiscal_ai_logo.png
+ create mode 100644 attached_assets/fiscal_ai_logo_new.png
+ create mode 100644 attached_assets/generated_images/TB_favicon_design_78619310.png
+ create mode 100644 attached_assets/grant-thornton_1755913265895.png
+ create mode 100644 attached_assets/image_1755911450206.png
+ create mode 100644 attached_assets/image_1755911483491.png
+ create mode 100644 attached_assets/image_1755911496878.png
+ create mode 100644 attached_assets/image_1755911506683.png
+ create mode 100644 attached_assets/image_1755911515248.png
+ create mode 100644 attached_assets/image_1755911528938.png
+ create mode 100644 attached_assets/image_1755911543448.png
+ create mode 100644 attached_assets/image_1755911553230.png
+ create mode 100644 attached_assets/image_1755911567555.png
+ create mode 100644 attached_assets/image_1755911578734.png
+ create mode 100644 attached_assets/image_1755911597937.png
+ create mode 100644 attached_assets/image_1755911611576.png
+ create mode 100644 attached_assets/image_1755911636080.png
+ create mode 100644 attached_assets/image_1755911649527.png
+ create mode 100644 attached_assets/image_1755911658931.png
+ create mode 100644 attached_assets/image_1755911671115.png
+ create mode 100644 attached_assets/image_1755911679352.png
+ create mode 100644 attached_assets/image_1755911713058.png
+ create mode 100644 attached_assets/image_1755911729778.png
+ create mode 100644 attached_assets/image_1755911740815.png
+ create mode 100644 attached_assets/image_1755912065492.png
+ create mode 100644 attached_assets/image_1755912326819.png
+ create mode 100644 attached_assets/image_1755912585358.png
+ create mode 100644 attached_assets/image_1755912662501.png
+ create mode 100644 attached_assets/image_1755916338156.png
+ create mode 100644 attached_assets/image_1755928448390.png
+ create mode 100644 attached_assets/image_1755942943785.png
+ create mode 100644 attached_assets/image_1755943398070.png
+ create mode 100644 attached_assets/image_1755943449294.png
+ create mode 100644 attached_assets/image_1755943575918.png
+ create mode 100644 attached_assets/image_1755943662458.png
+ create mode 100644 attached_assets/image_1755943936316.png
+ create mode 100644 attached_assets/image_1755944289354.png
+ create mode 100644 attached_assets/image_1755947890320.png
+ create mode 100644 attached_assets/image_1756103023880.png
+ create mode 100644 attached_assets/image_1756103305637.png
+ create mode 100644 attached_assets/mcgill_1755923720192.png
+ create mode 100644 attached_assets/mcgill_1755937693386.png
+ create mode 100644 attached_assets/resume_no_borders_1756110166431.pdf
+ create mode 100644 attached_assets/resume_no_borders_1756110417868.pdf
+ create mode 100644 attached_assets/trainning the street_1755923720193.png
+ create mode 100644 attached_assets/trainning the street_1755938972014.png
+ create mode 100644 attached_assets/wall street prep_1755923720193.png
+ create mode 100644 client/index.html
+ create mode 100644 client/public/apple-touch-icon.png
+ create mode 100644 client/public/favicon-192.png
+ create mode 100644 client/public/favicon-48.png
+ create mode 100644 client/public/favicon.ico
+ create mode 100644 client/public/site.webmanifest
+ create mode 100644 client/src/App.tsx
+ create mode 100644 client/src/components/about-section.tsx
+ create mode 100644 client/src/components/contact-info-section.tsx
+ create mode 100644 client/src/components/contact-section.tsx
+ create mode 100644 client/src/components/download-section.tsx
+ create mode 100644 client/src/components/experience-section.tsx
+ create mode 100644 client/src/components/hero-section.tsx
+ create mode 100644 client/src/components/navigation.tsx
+ create mode 100644 client/src/components/portfolio-section.tsx
+ create mode 100644 client/src/components/skills-section.tsx
+ create mode 100644 client/src/components/sql-translator.tsx
+ create mode 100644 client/src/components/ui/accordion.tsx
+ create mode 100644 client/src/components/ui/alert-dialog.tsx
+ create mode 100644 client/src/components/ui/alert.tsx
+ create mode 100644 client/src/components/ui/aspect-ratio.tsx
+ create mode 100644 client/src/components/ui/avatar.tsx
+ create mode 100644 client/src/components/ui/badge.tsx
+ create mode 100644 client/src/components/ui/breadcrumb.tsx
+ create mode 100644 client/src/components/ui/button.tsx
+ create mode 100644 client/src/components/ui/calendar.tsx
+ create mode 100644 client/src/components/ui/card.tsx
+ create mode 100644 client/src/components/ui/carousel.tsx
+ create mode 100644 client/src/components/ui/chart.tsx
+ create mode 100644 client/src/components/ui/checkbox.tsx
+ create mode 100644 client/src/components/ui/collapsible.tsx
+ create mode 100644 client/src/components/ui/command.tsx
+ create mode 100644 client/src/components/ui/context-menu.tsx
+ create mode 100644 client/src/components/ui/dialog.tsx
+ create mode 100644 client/src/components/ui/drawer.tsx
+ create mode 100644 client/src/components/ui/dropdown-menu.tsx
+ create mode 100644 client/src/components/ui/form.tsx
+ create mode 100644 client/src/components/ui/hover-card.tsx
+ create mode 100644 client/src/components/ui/input-otp.tsx
+ create mode 100644 client/src/components/ui/input.tsx
+ create mode 100644 client/src/components/ui/label.tsx
+ create mode 100644 client/src/components/ui/menubar.tsx
+ create mode 100644 client/src/components/ui/navigation-menu.tsx
+ create mode 100644 client/src/components/ui/pagination.tsx
+ create mode 100644 client/src/components/ui/popover.tsx
+ create mode 100644 client/src/components/ui/progress.tsx
+ create mode 100644 client/src/components/ui/radio-group.tsx
+ create mode 100644 client/src/components/ui/resizable.tsx
+ create mode 100644 client/src/components/ui/scroll-area.tsx
+ create mode 100644 client/src/components/ui/select.tsx
+ create mode 100644 client/src/components/ui/separator.tsx
+ create mode 100644 client/src/components/ui/sheet.tsx
+ create mode 100644 client/src/components/ui/sidebar.tsx
+ create mode 100644 client/src/components/ui/skeleton.tsx
+ create mode 100644 client/src/components/ui/slider.tsx
+ create mode 100644 client/src/components/ui/switch.tsx
+ create mode 100644 client/src/components/ui/table.tsx
+ create mode 100644 client/src/components/ui/tabs.tsx
+ create mode 100644 client/src/components/ui/textarea.tsx
+ create mode 100644 client/src/components/ui/toast.tsx
+ create mode 100644 client/src/components/ui/toaster.tsx
+ create mode 100644 client/src/components/ui/toggle-group.tsx
+ create mode 100644 client/src/components/ui/toggle.tsx
+ create mode 100644 client/src/components/ui/tooltip.tsx
+ create mode 100644 client/src/components/video-overlay.tsx
+ create mode 100644 client/src/hooks/use-counter-animation.ts
+ create mode 100644 client/src/hooks/use-mobile.tsx
+ create mode 100644 client/src/hooks/use-toast.ts
+ create mode 100644 client/src/hooks/useAnimationConfig.ts
+ create mode 100644 client/src/hooks/useAuth.ts
+ create mode 100644 client/src/hooks/useGlobalAnimations.ts
+ create mode 100644 client/src/hooks/useScrollAnimation.ts
+ create mode 100644 client/src/index.css
+ create mode 100644 client/src/lib/authUtils.ts
+ create mode 100644 client/src/lib/queryClient.ts
+ create mode 100644 client/src/lib/utils.ts
+ create mode 100644 client/src/main.tsx
+ create mode 100644 client/src/pages/employer.tsx
+ create mode 100644 client/src/pages/home.tsx
+ create mode 100644 client/src/pages/not-found.tsx
+ create mode 100644 client/src/pages/resume-upload-signin.tsx
+ create mode 100644 client/src/pages/resume.tsx
+ create mode 100644 client/src/pages/upload-resume-dashboard.tsx
+ create mode 100644 client/src/pages/upload-resume.tsx
+ create mode 100644 client/src/profile.jpg
+ create mode 100644 components.json
+ create mode 100644 drizzle.config.ts
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 postcss.config.js
+ create mode 100644 public/.well-known/security.txt
+ create mode 100644 public/Tyler_Bustard_Resume.html
+ create mode 100644 public/Tyler_Bustard_Resume.pdf
+ create mode 100644 public/apple-touch-icon.png
+ create mode 100644 public/favicon-16x16.png
+ create mode 100644 public/favicon-192.png
+ create mode 100644 public/favicon-32x32.png
+ create mode 100644 public/favicon-48.png
+ create mode 100644 public/favicon-512.png
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/google-verification.html
+ create mode 100644 public/humans.txt
+ create mode 100644 public/og-image.jpg
+ create mode 100644 public/profile.jpg
+ create mode 100644 public/robots.txt
+ create mode 100644 public/site.webmanifest
+ create mode 100644 public/sitemap.xml
+ create mode 100644 replit.md
+ create mode 100644 server/cloudinary.ts
+ create mode 100644 server/db.ts
+ create mode 100644 server/index.ts
+ create mode 100644 server/objectStorage.ts
+ create mode 100644 server/replitAuth.ts
+ create mode 100644 server/routes.ts
+ create mode 100644 server/storage.ts
+ create mode 100644 server/vite.ts
+ create mode 100644 shared/schema.ts
+ create mode 100644 tailwind.config.ts
+ create mode 100644 temp_community_section.txt
+ create mode 100644 tsconfig.json
+ create mode 100644 uploads/resumes/f2f629ef844130e914ab969f8c431362
+ create mode 100644 uploads/resumes/resume-1756324233003-626596849.pdf
+ create mode 100644 uploads/videos/2c7cc2da4b131fce3d78f15af72f04a2.mov
+ create mode 100644 uploads/videos/5bf2c8ea-5c41-439c-8655-b4928a21851a.mov
+ create mode 100644 uploads/videos/video-1756101065118-522496753.mov
+ create mode 100644 uploads/videos/video-1756149343671-298403547.mov
+ create mode 100644 uploads/videos/video-1756150030760-4713146.mov
+ create mode 100644 uploads/videos/video-1756153170656-246908141.mov
+ create mode 100644 uploads/videos/video-1756153284639-464598785.mov
+ create mode 100644 uploads/videos/video-1756153647866-492147008.mov
+ create mode 100644 uploads/videos/video-1756153858977-4176847.mov
+ create mode 100644 uploads/videos/video-1756155187265-667059813.mov
+ create mode 100644 uploads/videos/video-1756323906261-705207796.mov
+ create mode 100644 uploads/videos/video-1756325254510-210175729.mov
+ create mode 100644 uploads/videos/video-1756325579025-942282507.mov
+ create mode 100644 uploads/videos/video-1756330170549-336520839.mov
+ create mode 100644 vite.config.ts
+Enumerating objects: 527, done.
+Counting objects: 100% (527/527), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (525/525), done.
+Writing objects: 100% (527/527), 100.55 MiB | 5.65 MiB/s, done.
+Total 527 (delta 20), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (20/20), done.
+To https://github.com/tylerbustard/Personal-Profile.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+~/workspace$ # Try pushing without compression
+git config http.postBuffer 524288000
+git push origin main --force
+
+# Or try pushing in smaller chunks
+git config pack.windowMemory 256m
+git config pack.packSizeLimit 2g
+git push origin main --force
+Everything up-to-date
+Everything up-to-date
+~/workspace$ # Check your commit history
+git log --oneline -10
+
+# Try pushing just the most recent commit
+git push origin HEAD:main --force
+8e8a31c (HEAD -> main, origin/main) Initial commit
+Everything up-to-date
+~/workspace$ 

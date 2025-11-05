@@ -1,0 +1,5 @@
+# Security Policy for tylerbustard.ca
+Contact: mailto:security@tylerbustard.ca
+Expires: 2026-08-28T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://tylerbustard.ca/.well-known/security.txt

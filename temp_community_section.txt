@@ -1,0 +1,38 @@
+                  {/* Community Quadrant */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 hover:shadow-lg transition-all duration-300">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg apple-hover">
+                          <img 
+                            src={unitedWayLogo} 
+                            alt="United Way Logo" 
+                            className="w-12 h-12 object-contain transition-all duration-300 hover:scale-110"
+                          />
+                        </div>
+                        <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg apple-hover">
+                          <img 
+                            src={rbcLogo} 
+                            alt="RBC Community Logo" 
+                            className="w-12 h-12 object-contain transition-all duration-300 hover:scale-110"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-foreground mb-2">Community</h3>
+                        <div className="space-y-2 text-sm text-muted-foreground">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+                            <span>Leadership through engagement</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+                            <span>Meaningful community impact</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+                            <span>Commitment to service</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>

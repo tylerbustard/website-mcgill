@@ -1,0 +1,7 @@
+{
+  "remote.portsAttributes": {
+    "5175": { "label": "McGill Site", "onAutoForward": "openPreview" }
+  }
+}
+
+

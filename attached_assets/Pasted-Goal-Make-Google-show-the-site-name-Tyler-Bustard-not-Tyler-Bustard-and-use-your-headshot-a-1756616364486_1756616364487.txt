@@ -1,0 +1,90 @@
+Goal: Make Google show the site name “Tyler Bustard” (not “Tyler - Bustard”) and use your headshot as the favicon in search results for https://tylerbustard.ca.
+What to build (exact steps & code):
+Update the head of your home page (index.html at the domain root)
+Use this <head> (copy/paste). Replace only the og:image URL with your preferred social/share image if needed.
+   <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Page title (keep the brand exactly as your preferred site name) -->
+  <title>Tyler Bustard — Finance & Technology</title>
+
+  <!-- Canonical home URL -->
+  <link rel="canonical" href="https://tylerbustard.ca/" />
+
+  <!-- Favicons (one stable URL per hostname) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph (helps with social previews and is a secondary signal for site name) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tylerbustard.ca/" />
+  <meta property="og:site_name" content="Tyler Bustard" />
+  <meta property="og:title" content="Tyler Bustard — Finance & Technology" />
+  <meta property="og:image" content="https://tylerbustard.ca/og-image.jpg" />
+
+  <!-- Site name control for Google (most important signal) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Tyler Bustard",
+    "alternateName": ["Tyler Bustard - Finance & Technology", "tylerbustard.ca"],
+    "url": "https://tylerbustard.ca/"
+  }
+  </script>
+</head>
+   Why this matters: Google primarily uses WebSite structured data to understand your preferred site name and also looks at og:site_name, <title>, and on-page headings; keeping them consistent (“Tyler Bustard”) strengthens the signal. Google for Developers
+Provide a crawlable favicon (your face pic)
+Create a square crop of your headshot that still reads at 16–24px (tight crop, simple background, high contrast).
+Export these exact files and place them at your project root in Replit:    /favicon.ico        (multi‑size .ico; include a 48x48 frame)
+/favicon-48.png     (48x48 PNG)
+/favicon-192.png    (192x192 PNG)
+/apple-touch-icon.png (180x180 PNG)
+/favicon-512.png    (512x512 PNG for the web manifest)
+  
+Keep the file URLs stable (don’t rename them between deploys). Ensure they are publicly accessible (HTTP 200), not blocked by robots.txt. Google supports one favicon per hostname and recommends ≥48×48px for quality. Google for Developers
+Add a minimal web app manifest (optional but tidy)
+Create /site.webmanifest:
+   {
+  "name": "Tyler Bustard",
+  "short_name": "Tyler Bustard",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
+  
+Robots + sitemap (keep the homepage crawlable)
+Create /robots.txt:
+   User-agent: *
+Allow: /
+
+Sitemap: https://tylerbustard.ca/sitemap.xml
+  
+Make sure your homepage and the favicon files are not disallowed. Google needs to crawl the home page and the favicon to show the icon. Google for Developers
+Content consistency
+Ensure your homepage’s visible H1 also uses “Tyler Bustard” (no hyphen split). Google considers homepage text as another signal for the site name. Google for Developers
+Deploy, then validate & nudge Google
+Validate structured data: Use the Schema Markup Validator to confirm the WebSite JSON‑LD has name and url, and (optionally) alternateName. (The Rich Results Test doesn’t check site names.) Google for Developers
+Request a recrawl of your homepage in Search Console → URL Inspection → Request indexing after you deploy. This is the official way to let Google pick up the new favicon and site name sooner. Google for Developers
+
+Notes tied to Google’s guidance (for your records)
+Site name control: Put WebSite structured data on the home page of the domain you want the name for, keep the name consistent across signals, and use alternateName as a fallback if needed. Subdirectories don’t get their own site names. Google for Developers
+Favicon requirements: Square icon, at least 8×8px (recommended ≥48×48px), one favicon per hostname (e.g., www vs. a subdomain can differ), must be crawlable by Googlebot/Googlebot‑Image, and use a stable URL. Google for Developers
+Getting changes picked up: Use Search Console’s URL Inspection → Request Indexing on the homepage after updates (you must be a verified property owner). Google for Developers
+
+Quick checklist for Replit
+Root index.html uses the <head> above.
+Headline/H1 shows “Tyler Bustard”.
+Favicon assets uploaded at root with stable filenames (/favicon.ico, /favicon-48.png, etc.).
+/robots.txt allows crawling; sitemap referenced if you have one.
+Search Console: request indexing for https://tylerbustard.ca/.
