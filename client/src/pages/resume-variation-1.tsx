@@ -25,6 +25,15 @@ export default function ResumeVariation1() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
+    const originalTitle = document.title;
+    document.title = "Tyler Bustard - Resume";
+
+    return () => {
+      document.title = originalTitle;
+    };
+  }, []);
+
+  useEffect(() => {
     let timeoutId: NodeJS.Timeout | null = null;
     let lastKnownScrollY = 0;
     
@@ -129,7 +138,7 @@ export default function ResumeVariation1() {
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Programming</h4>
                     <div className="flex flex-wrap gap-1">
                       {['Python', 'SQL', 'JavaScript', 'R', 'VBA'].map(skill => (
-                        <span key={skill} className="inline-block px-2 py-1 rounded text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                        <span key={skill} className="resume-skill-chip inline-block px-2 py-1 rounded text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
                           {skill}
                         </span>
                       ))}
@@ -139,7 +148,7 @@ export default function ResumeVariation1() {
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">AI & Analytics</h4>
                     <div className="flex flex-wrap gap-1">
                       {['Machine Learning', 'OpenAI API', 'Data Analysis', 'Automation'].map(skill => (
-                        <span key={skill} className="inline-block px-2 py-1 rounded text-xs font-medium bg-green-50 text-green-700 border border-green-200">
+                        <span key={skill} className="resume-skill-chip inline-block px-2 py-1 rounded text-xs font-medium bg-green-50 text-green-700 border border-green-200">
                           {skill}
                         </span>
                       ))}
@@ -149,7 +158,7 @@ export default function ResumeVariation1() {
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Platforms</h4>
                     <div className="flex flex-wrap gap-1">
                       {['Bloomberg', 'Excel', 'Tableau', 'Git', 'AWS'].map(skill => (
-                        <span key={skill} className="inline-block px-2 py-1 rounded text-xs font-medium bg-purple-50 text-purple-700 border border-purple-200">
+                        <span key={skill} className="resume-skill-chip inline-block px-2 py-1 rounded text-xs font-medium bg-purple-50 text-purple-700 border border-purple-200">
                           {skill}
                         </span>
                       ))}
@@ -196,7 +205,7 @@ export default function ResumeVariation1() {
                       </ul>
                       <div className="flex flex-wrap gap-2">
                         {['Portfolio Automation', 'VBA Programming', 'Bloomberg Terminal', 'Data Analytics', 'Client Tech Solutions'].map(skill => (
-                          <span key={skill} className="inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                          <span key={skill} className="resume-skill-chip inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
                             {skill}
                           </span>
                         ))}
@@ -234,7 +243,7 @@ export default function ResumeVariation1() {
                       </ul>
                       <div className="flex flex-wrap gap-2">
                         {['Digital Banking', 'CRM Systems', 'Fintech Solutions', 'Data-Driven Sales', 'Technology Adoption'].map(skill => (
-                          <span key={skill} className="inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                          <span key={skill} className="resume-skill-chip inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
                             {skill}
                           </span>
                         ))}
@@ -332,6 +341,18 @@ export default function ResumeVariation1() {
           <ChevronUp size={20} />
         </button>
       )}
+
+      <style>{`
+        @media print {
+          .resume-skill-chip {
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            color: #1f2937 !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
